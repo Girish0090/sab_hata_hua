@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node generate-env.js && ng serve",
-    "build": "node generate-env.js && ng build",
+    "start": "node init && node generate-env.js && ng serve",
+    "build": "node init && node generate-env.js && ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run flexo-aggregation-website:serve-ssr",
+    "dev:ssr": "node init && ng run flexo-aggregation-website:serve-ssr",
     "serve:ssr": "node dist/flexo-aggregation-website/server/main.js",
-    "build:ssr": "node generate-env.js && ng build --configuration=production && ng run flexo-aggregation-website:server",
+    "build:ssr": "node init && node generate-env.js && ng build --configuration=production && ng run flexo-aggregation-website:server",
     "prerender": "ng run flexo-aggregation-website:prerender",
     "sitemap": "node sitemap-update.js"
   },
